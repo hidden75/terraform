@@ -12,7 +12,7 @@ locals {
 
 
   vnet_name          = "db_virtual_network"
-  public_subnet_name = "public"
+  public_subnet_name = "AzureBastionSubnet"
 
   private_subnet_name       = "private"
   vm_network_interface_name = "db_network_interface"
@@ -25,9 +25,9 @@ locals {
 
   vm_admin_password = "P@$$w0rd1234!"
 
-	
+
   bastion_public_ip_name = "db-bastion-public-ip"
-	
-  bastion_host_name      = "db-bastion"
+
+  bastion_host_name = "db-bastion"
 }
 

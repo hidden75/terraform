@@ -1,5 +1,12 @@
+	
 # bastion.tf
 	
+resource "azurerm_subnet" "AzureBastionSubnet" {
+  name                 = "AzureBastionSubnet"  # This is the cause of the issue
+  resource_group_name  = local.resource_group_name
+  virtual_network_name = local.vnet_name
+  address_prefixes     = ["10.0.1.0/24"]
+}
 	
 resource "azurerm_public_ip" "bastion_public_ip" {
 	
@@ -16,7 +23,7 @@ resource "azurerm_public_ip" "bastion_public_ip" {
 }
 	
 	
-resource "azurerm_bastion_host" "bastion_host" {
+resource "azurerm_bastion_host" "db-bastion" {
 	
   name                = local.bastion_host_name
 	
@@ -32,7 +39,7 @@ resource "azurerm_bastion_host" "bastion_host" {
 	
     subnet_id            = azurerm_subnet.public.id
 	
-    public_ip_address_id = azurerm_public_ip.public-ip.id
+    public_ip_address_id = azurerm_public_ip.db-bastion-public-ip.id
 	
   }
 	
