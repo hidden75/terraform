@@ -16,5 +16,6 @@ locals {
 
   private_subnet_name       = "private"
   vm_network_interface_name = "db_network_interface"
+  vm_security_group         = "db_security_group"
 }
 
