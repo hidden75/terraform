@@ -7,7 +7,7 @@ locals {
 
   resource_group_name = "db_resources"
 
-  location = "East US"
+  location = "East US2"
 
 
 
@@ -24,5 +24,10 @@ locals {
   vm_admin_username = "adminuser"
 
   vm_admin_password = "P@$$w0rd1234!"
+
+	
+  bastion_public_ip_name = "db-bastion-public-ip"
+	
+  bastion_host_name      = "db-bastion"
 }
 

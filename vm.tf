@@ -121,7 +121,7 @@ resource "azurerm_windows_virtual_machine" "db_vm" {
 
   resource_group_name = local.resource_group_name
 
-  size = "Standard_A1"
+  size = "Standard_A1_v2"
 
   admin_username = local.vm_admin_username
 
