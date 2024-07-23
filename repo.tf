@@ -12,6 +12,15 @@ resource "github_repository" "terraform" {
 
   visibility = "public"
 
-
-
+  security_and_analysis {
+    advanced_security {
+      status = "disabled"
+    }
+    secret_scanning {
+      status = "disabled"
+    }
+    secret_scanning_push_protection {
+      status = "disabled"
+    }
+  }
 }

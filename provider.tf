@@ -19,6 +19,14 @@ terraform {
 
     }
 
+    azurerm = {
+
+      source = "hashicorp/azurerm"
+
+      version = "3.113.0"
+
+    }
+
   }
 
 }
@@ -30,5 +38,13 @@ provider "github" {
   # Configuration options
 
   token = var.token
+
+}
+
+provider "azurerm" {
+
+  # Configuration options
+
+  features {}
 
 }
