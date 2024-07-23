@@ -5,12 +5,12 @@
 
 locals {
 
-  resource_group_name = "db-resources"
+  resource_group_name = "db_resources"
 
   location = "West US"
 
 
 
-  vnet_name = "db-virtual-network"
+  vnet_name = "db_virtual_network"
 
 }

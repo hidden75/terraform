@@ -1,5 +1,5 @@
 
-resource "azurerm_resource_group" "db_rg" {
+resource "azurerm_resource_group" "db_resources" {
 
   name = local.resource_group_name
 
